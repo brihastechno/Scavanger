@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_top"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:gravity="center"
+                android:text="Click image to enlarge. Then tap button to vote"
+                android:textColor="#AA0020"
+                android:textSize="15sp" />
+
+            <FrameLayout
+                android:layout_width="fill_parent"
+                android:layout_height="450dp"
+                android:layout_gravity="top"
+                android:layout_marginTop="20dp" >
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="450dp"
+                    android:src="@drawable/voting_picture2" />
+
+                <ImageView
+                    android:id="@+id/imageView_huntitems"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="80dp"
+                    android:layout_marginLeft="15dp" />
+
+                <Button
+                    android:id="@+id/button_pass"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="55dp"
+                    android:layout_marginRight="95dp"
+                    android:background="@drawable/pass" />
+
+                <Button
+                    android:id="@+id/button_fail"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_gravity="bottom|center_horizontal"
+                    android:layout_marginBottom="55dp"
+                    android:layout_marginLeft="120dp"
+                    android:background="@drawable/fail" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+            xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom" >
+
+            <com.google.ads.AdView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="a150b35fa937e66"
+                ads:loadAdOnCreate="true" >
+            </com.google.ads.AdView>
+      
+        </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notification_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/edittextback"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/Notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6981A"
+            android:gravity="center_horizontal"
+            android:text="Tap To Close"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notifica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:background="@android:color/white"
+            android:text=""
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

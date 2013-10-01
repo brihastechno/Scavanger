@@ -1,0 +1,109 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/white" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp" >
+
+            <Button
+                android:id="@+id/button_invite"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/invite" />
+
+            <Button
+                android:id="@+id/button_rules"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/rules_button" />
+
+            <Button
+                android:id="@+id/button_share"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/tellafriend" />
+
+            <Button
+                android:id="@+id/button_play"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/start" />
+        </TableRow>
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+          >
+
+            <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginBottom="50dip"
+            android:src="@drawable/loggedinscreen" />
+
+ 
+        <LinearLayout xmlns:ads= "http://schemas.android.com/apk/lib/com.google.ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+               android:layout_gravity="center_horizontal|bottom"
+          >
+
+            <com.google.ads.AdView xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+             
+                ads:adSize="BANNER"
+                ads:adUnitId="a150b35fa937e66"
+                ads:loadAdOnCreate="true" >
+            </com.google.ads.AdView>
+        </LinearLayout>
+     </FrameLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notification_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:background="@drawable/edittextback"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/Notification"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#E6981A"
+            android:gravity="center_horizontal"
+            android:text="Tap To Close"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/notifica"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="4dp"
+            android:background="@android:color/white"
+            android:text=""
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</FrameLayout>

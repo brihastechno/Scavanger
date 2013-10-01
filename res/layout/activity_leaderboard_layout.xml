@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_gravity="bottom"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+   android:layout_marginBottom="50dip"
+   >
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="fill_parent"
+            android:layout_height="105dp"
+            android:layout_gravity="top|center_horizontal"
+            android:src="@drawable/leaderboard_title" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="top"
+            android:layout_marginBottom="60dp"
+            android:layout_marginTop="110dp"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView_round"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text=" "
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+        
+                android:textSize="18sp" />
+
+            <ListView
+                android:id="@+id/leaderboard_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/transparent"
+                android:fadingEdge="none"
+                android:scrollbars="none"
+                android:textFilterEnabled="true" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/back_button" />
+    </FrameLayout>
+
+    <LinearLayout
+            xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom" >
+
+            <com.google.ads.AdView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="a150b35fa937e66"
+                ads:loadAdOnCreate="true" >
+            </com.google.ads.AdView>
+      
+        </LinearLayout>
+
+</FrameLayout>

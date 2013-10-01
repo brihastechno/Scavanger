@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+
+  
+    
+    <FrameLayout android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="top" 
+        android:layout_marginBottom="50dip">
+        <TextView
+        android:id="@+id/textView_message"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:singleLine="true"
+        android:text="You can invite up to nine friends to play"
+        android:textColor="#AA0020"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ListView
+        android:id="@+id/friendsview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_marginBottom="55dp"
+        android:layout_marginTop="25dp"
+        android:fadingEdge="none"
+        android:scrollbars="none"
+        android:textFilterEnabled="true" />
+        <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|center_horizontal"
+                android:layout_marginBottom="5dp" 
+            >
+
+                <Button
+                    android:id="@+id/button_invite"
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Invite"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/image_back"
+                    android:layout_width="60dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:src="@drawable/back_button" />
+            </TableRow>
+    
+    </FrameLayout>
+
+   
+
+    <LinearLayout
+            xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|bottom" >
+
+            <com.google.ads.AdView
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                ads:adSize="BANNER"
+                ads:adUnitId="a150b35fa937e66"
+                ads:loadAdOnCreate="true" >
+            </com.google.ads.AdView>
+      
+        </LinearLayout>
+    </FrameLayout>
+
